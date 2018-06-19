@@ -8,7 +8,7 @@ public class Exercises {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//finally got this set up with github
-		biggestDifference();
+		allSquares(101);
 	}
 	public static void biggestDifference(){
 		Scanner reader = new Scanner(System.in);
@@ -48,6 +48,20 @@ public class Exercises {
 		}
 		else{
 			System.out.println("The greatest difference in the input array is " + (highest-lowest));
+		}
+	}
+	public static void allSquares(float max){
+		//this method will print all squares numbers less than the max value
+		float i = 1;
+		if(max>0){
+			while(i*i <=max){
+				System.out.println(i*i);
+				i++;
+			}
+			
+		}
+		else{
+			System.out.println("No squares are below 0");
 		}
 	}
 }
