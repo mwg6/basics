@@ -22,8 +22,32 @@ public class Exercises {
 		String arrayRaw = reader.nextLine();
 		String[] arrayCheck = arrayRaw.split(" ");
 		
-		System.out.println(Arrays.toString(arrayProcessed));
-		System.out.println(arraySize);
-		System.out.println(Arrays.toString(arrayCheck));
+		//need to use "worst" possible starting values to insure I get correct answers
+		int highest = -Integer.MAX_VALUE;
+		int lowest = Integer.MAX_VALUE;
+		int temp;
+		
+		for(int i=0;i<arrayCheck.length;i++){
+			
+			temp = Integer.parseInt(arrayCheck[i]);
+			//two seperate if loops prevent the case where if the lowest number occurs first it will be recorded
+			//as a high number then the loop is exited;
+			if (temp>highest){
+				highest = temp;
+			}
+			else{}
+			if(temp<lowest){
+				lowest = temp;
+			}
+			else{}
+		}
+		
+		//finally, math and release of number
+		if(arraySize==1){
+			System.out.println("Cannot find difference in a single value");
+		}
+		else{
+			System.out.println("The greatest difference in the input array is " + (highest-lowest));
+		}
 	}
 }
