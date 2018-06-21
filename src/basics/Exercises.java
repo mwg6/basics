@@ -8,7 +8,8 @@ public class Exercises {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//finally got this set up with github
-		allSquares(101);
+		String[] a = {"a","a","b","a"};
+		stripDuplicates(a);
 	}
 	public static void biggestDifference(){
 		Scanner reader = new Scanner(System.in);
@@ -64,4 +65,37 @@ public class Exercises {
 			System.out.println("No squares are below 0");
 		}
 	}
+	public static void breakArray(String[] text){
+				
+		for(String item:text){
+			System.out.println(item);
+			
+		}
+		
+	}
+	public static void isPalindromic(String[] text){
+				
+		boolean isPalindromic = true;
+		//too minimize number of calculations, only compare to half +1 at most cases
+		for(int i = 0; i<(text.length/2)+1; i++){
+			if(text[i]!=text[text.length-(1+i)]){
+				isPalindromic = false;
+			}
+		}
+		System.out.println(isPalindromic);
+	}
+	
+	public static void stripDuplicates(String[] text){
+		String hold=text[0];
+		System.out.println(hold);
+		
+		for(String item:text){
+			if(item!=hold){
+				System.out.println(item);
+				hold = item;
+			}
+		}
+	}
+	
+	
 }
